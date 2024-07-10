@@ -90,6 +90,8 @@ section {
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
+    margin-right: 5%;
+    flex-basis: 50%;
 }
 span {
     color: var(--main-color);
@@ -108,9 +110,7 @@ span {
     margin-top: 1.5rem;
     line-height: 1;
 }
-.home-col{
-    flex-basis: 60%;
-}
+
 .home-img {
     border-radius: 50%;
 }
@@ -282,6 +282,8 @@ span {
 }
 .about-col-2 {
     flex-basis: 60%;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .sub-title {
