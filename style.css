@@ -78,6 +78,11 @@ section {
     justify-content: center;
     gap: 15rem;
 }
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .home-content {
     display: flex;
     flex-direction: column;
@@ -102,6 +107,9 @@ span {
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
+}
+.home-col{
+    flex-basis: 60%;
 }
 .home-img {
     border-radius: 50%;
@@ -179,4 +187,131 @@ span {
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
     color: black;
+}
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span {
+    position: relative;
+}
+.text-animation span::before {
+    content: "Web Developer";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words {
+    0%, 
+    20% {
+        content: "UI / UX Designer";
+    }
+    21%,
+    40% {
+        content: "Web Designer";
+    }
+    41%,
+    60% {
+        content: "Web Developer";
+    }
+    61%,
+    80% {
+        content: "Mobile Designer";
+    }
+    81%,
+    100% {
+        content: "Mobile Developer";
+    }
+}
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+/* ------------------About Me -------------------- */
+#about {
+    padding: 80px 0;
+    color: white;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 20px;
+}
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content:"";
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
 }
