@@ -73,11 +73,11 @@
                             expedita omnis incidunt? Excepturi, nihil veritatis.</p>
 
                             <div class="tab-titles">
-                                <p class="tab-links active-link">Skills</p>
-                                <p class="tab-links">Education</p>
-                                <p class="tab-links">Experience</p>
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
                             </div>
-                            <div class="tab-contents">
+                            <div class="tab-contents active tab" id="skills">
                                 <ul>
                                     <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                                     <li><span>Web Development</span><br>Web app development</li>
@@ -85,10 +85,31 @@
 
                                 </ul>
                             </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2015 - 2019</span><br>High School Diploma from WHS</li>
+                                    <li><span>2019 - 2023</span><br>Bachelor of Science at CSULB</li>
+
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2016 - 2019</span><br>Programmed/built VEX robots/Arduino and Designed in Solidworks at WHS</li>
+                                    <li><span>2021</span><br>Hackathon at CSUF</li>
+                                    <li><span>2023 - Current</span><br>Building Android apps and learning UI/UX</li>
+
+                                </ul>
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
+
+<!-- ---------------------- Services ----------------------- -->
+        <section>
+
+        </section>
+        
         <script src="script.js"></script>
     </body>
 </html>
